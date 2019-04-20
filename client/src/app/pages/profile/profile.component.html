@@ -1,0 +1,66 @@
+<main class="container">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-6">
+      <br />
+      <div class="card">
+        <form autocomplete="off" (submit)="onUsersUpdatedProfileInfo()">
+          <div class="card-header text-center">
+            <h1>{{ title }}</h1>
+          </div>
+          <div class="card-body">
+            <fieldset class="form-group">
+              <label for="username">Username:</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="user.username"
+                name="username"
+                id="username"
+                required
+                autocomplete="off"
+              />
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                [(ngModel)]="user.email"
+                name="email"
+                placeholder="Enter Email"
+                id="email"
+                required
+                autocomplete="off"
+              />
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="displayName">Display Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="user.displayName"
+                name="displayName"
+                placeholder="Enter Display Name"
+                id="displayName"
+                required
+                autocomplete="off"
+              />
+            </fieldset>
+          </div>
+          <div class="card-footer">
+            <fieldset class="form-group text-right">
+              <input type="submit" class="btn btn-primary" value="Update" />
+              <a routerLink="/home"
+                >&nbsp;
+                <input type="button" class="btn btn-info" value="Cancel" />
+              </a>
+            </fieldset>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+<br>
+<br>
+<br>
